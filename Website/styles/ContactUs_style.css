@@ -1,0 +1,58 @@
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    width: min(70vw, 600px);
+    background-color: var(--Primary-Onyx);
+    padding: 3rem;
+    border: 3px solid var(--Primary-Lime);
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.input-group label {
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.input-group input,
+.input-group textarea {
+    font-size: 1.2rem;
+    padding: 1rem;
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 2px solid white;
+    color: white;
+    outline: none;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+    border-radius: 0;
+}
+
+.input-group input:focus,
+.input-group textarea:focus {
+    border-color: var(--Primary-Lime);
+    background-color: rgba(192, 255, 1, 0.05);
+}
+
+.input-group input::placeholder,
+.input-group textarea::placeholder {
+    color: rgba(255, 255, 255, 0.4);
+}
+
+
+.submit-btn {
+    font-size: 2.5rem;
+    padding: 1rem 2rem;
+    margin-top: 1.5rem;
+    background-color: var(--Primary-Lime);
+    color: var(--Primary-Onyx);
+    cursor: pointer;
+    text-transform: uppercase;
+    
+}

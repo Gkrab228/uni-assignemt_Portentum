@@ -1,0 +1,18 @@
+
+h3{
+    color: white;
+    font-size: 4rem;
+    margin: 2rem;
+}
+
+.used-programs{
+    width: 60vw;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10vw;
+    padding: 4rem 0rem;
+    background-color: var(--Primary-Onyx);
+    box-shadow: 0px 10px 0 #C0FF01;
+}

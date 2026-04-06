@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>O nas</title>
+    <link rel="stylesheet" href="styles/generalStyle.css">
+    <link rel="stylesheet" href="styles/ContactUs_Style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Michroma&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <main>
+        <section class="presentation-section">
+            <header>
+                <img src="Assets/Logo.svg" alt="">
+                <button type="button" class="burger-menu">
+                    <img src="Assets/burger-menu-svgrepo-com.svg" alt="" width="80" fill="white">
+                </button>
+                <nav>
+                    <a href="index.html"><h2>Główna</h2></a>
+                    <img src="Assets/check_indeterminate_small.svg" alt="" aria-hidden="true">
+                    <a href="about_us.html"><h2>O nas</h2></a>
+                    <img src="Assets/check_indeterminate_small.svg" alt="" aria-hidden="true">
+                    <a href="contact_us.html"><h2>Kontakt</h2></a>
+                </nav>
+            </header>
+            <h3>Skontakuj się z nami!</h3>
+            <form action="#" method="post">
+                <div class="input-group">
+                    <label for="name">Imię</label>
+                    <input type="text" id="name" name="name" required placeholder="Wpisz swoje imię">
+                </div>
+                
+                <div class="input-group">
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email" name="email" required placeholder="twój@email.com">
+                </div>
+                
+                <div class="input-group">
+                    <label for="message">Wiadomość</label>
+                    <textarea id="message" name="message" rows="5" required placeholder="O czym chcesz pogadać?"></textarea>
+                </div>
+                
+                <button type="submit" class="submit-btn">WYŚLIJ</button>
+            </form>
+        </section>
+       
+    </main>
+    <footer></footer>
+    <script src="script.js"></script>
+</body>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portentum</title>
+    <link rel="stylesheet" href="styles/generalStyle.css">
+    <link rel="stylesheet" href="styles/Index_style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Michroma&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <main>
+        <section class="presentation-section">
+            <header>
+                <img src="Assets/Logo.svg" alt="">
+                <button type="button" class="burger-menu">
+                    <img src="Assets/burger-menu-svgrepo-com.svg" alt="" width="80" fill="white">
+                </button>
+                <nav>
+                    <a href="index.html"><h2>Główna</h2></a>
+                    <img src="Assets/check_indeterminate_small.svg" alt="" aria-hidden="true">
+                    <a href="about_us.html"><h2>O nas</h2></a>
+                    <img src="Assets/check_indeterminate_small.svg" alt="" aria-hidden="true">
+                    <a href="contact_us.html"><h2>Kontakt</h2></a>
+                </nav>
+            </header>
+            <div class="can-over-text">
+                <h1 class="h-Green">CZYSTA<br>SIŁA</h1>
+                <picture class="pic-can parralax">
+                    <source srcset="Assets/can_green_vertical.png" media="(max-width: 700px)">
+                    <img src="Assets/can_green.png" alt="Puszka energetyka" class="can">
+                </picture>
+            </div>
+            <button type="button" class="buy-now">
+                <p>KUP TERAZ!</p>
+            </button>
+            <video autoplay muted loop class="background-video">
+                <source src="Assets/Background-animation/Background-Anim.mp4" type="video/mp4">
+            </video>
+        </section>
+        <section class="banner-section">
+            <svg class="side-halfcircle" xmlns="http://www.w3.org/2000/svg" >
+                <defs>
+                  <path id="textPath" d="M 0,-300 A 450,450 0 0,1 0,1000 Z" />
+                </defs>
+              
+                <path class="halfcircle" d="M 0,-300 A 450,450 0 0,1 0,1000 Z"/>
+              
+                <text >
+                  <textPath href="#textPath" color="white" startOffset="20%">RÓŻNE SMAKI</textPath>
+                </text>
+              </svg>
+              <article class="banner-content">
+                <h1 class="h-Purple">Winogrono</h1>
+                <picture class="pic-can parralax">
+                    <source media="(max-width: 700px)" srcset="Assets/can_purple_vertical.png">
+                    <img src="Assets/can_purple.png" alt="Puszka energetyka" class=" can">
+                </picture>
+              </article>
+              <button type="button" class="buy-now purple">
+                <p>KUP TERAZ!</p>
+            </button>
+        </section>
+    </main>
+    <footer>
+        
+    </footer>
+
+
+</body>
+<script src="script.js"></script>
+</html>
