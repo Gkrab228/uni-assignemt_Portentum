@@ -16,6 +16,7 @@
     min-height: 100%;
     overflow: hidden;
     z-index: -1;
+    top:-10px;
 }
 
 .can-over-text{
@@ -55,14 +56,18 @@
     }
 
     .h-Purple{
-        margin: 0% 0 320% 0;
+        margin: 10% 0 60% 0 !important;
+        line-height: 100%;
     }
 
     .presentation-section{
         padding: 12rem 0 12rem 0 !important;
     }
     .buy-now{
-        margin: 100% 0 0 0rem;
+        margin: 100% 0 0 0;
+    }
+    .buy-now.purple{
+        margin: 130% 0 0 0;
     }
 }
 
@@ -117,7 +122,7 @@ svg{
     margin-left: 30vw;
     justify-content: center;
     align-items: center;
-    overflow: hidden;
+    position: relative;
 }
 
 .banner-content h1{
