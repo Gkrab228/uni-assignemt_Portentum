@@ -1,11 +1,39 @@
+
+
+body{
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 1fr auto;
+}
+
+main{
+    position: relative;
+    height: 100vh;
+    display: grid;
+    justify-items: center;
+    grid-template-rows: auto 1fr;
+    align-items: center;
+}
+
+header{
+    z-index: 1;
+}
+
+.contact-us-section{
+    height: min-content;
+    display: flex;
+    align-items: center;
+    z-index: 1;
+}
+
 form{
     display: flex;
     flex-direction: column;
+    margin: auto;
     gap: 1.5rem;
     width: min(70vw, 600px);
     background-color: var(--Primary-Onyx);
     padding: 3rem;
-    border: 3px solid var(--Primary-Lime);
 }
 
 .input-group {
@@ -15,10 +43,10 @@ form{
 }
 
 .input-group label {
+    font-family: "Michroma";
     color: white;
     font-size: 1.2rem;
     font-weight: 700;
-    text-transform: uppercase;
     letter-spacing: 1px;
 }
 
@@ -53,6 +81,21 @@ form{
     background-color: var(--Primary-Lime);
     color: var(--Primary-Onyx);
     cursor: pointer;
-    text-transform: uppercase;
-    
+}
+
+.background-bin{
+    position: absolute;
+    user-select: none;
+    font-size: 4rem;
+    letter-spacing: .2rem;
+    line-height: calc(2rem + 5px);
+    font-family: "Jersey 10";
+    height: inherit;
+    width: 100%;
+    color: rgb(35, 35, 35);
+    overflow: hidden;
+}
+
+.background-bin span{
+    transition: color .5s cubic-bezier(0, 0.96, 0.11, 0.96);
 }

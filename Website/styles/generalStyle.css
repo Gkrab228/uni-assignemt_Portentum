@@ -18,7 +18,7 @@ body{
 }
 
 header{
-    height: auto;
+    height: min-content;
     display: flex;
     width: 100%;
     align-items: center;
@@ -54,7 +54,7 @@ nav{
 }
 
 nav h2{
-    font-size: 1.8rem;
+    font-size: 2.5rem;
 }
 
 .burger-menu {
@@ -104,7 +104,7 @@ nav h2{
         top: 10%;
     }
     h1{
-        font-size: calc(5em + 10vw) !important;
+        font-size: calc(5em + 10vw);
     }
 }
 

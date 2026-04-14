@@ -2,8 +2,7 @@
     background: url("../Assets/Background-animation/Background-Anim.mp4") bottom;
     position: relative;
     background-size:  auto max(120%, 800px);
-    min-height: 100vh;
-    min-height: 100dvh;
+    min-height: max-content;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -24,6 +23,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 5rem 0;
 }
 
 .h-Green{
@@ -55,7 +55,8 @@
         line-height: 100%;
     }
 
-    .h-Purple{
+    .h-Taste{
+        
         margin: 10% 0 60% 0 !important;
         line-height: 100%;
     }
@@ -127,7 +128,7 @@ svg{
 
 .banner-content h1{
     margin-bottom: 80%;
-    font-size: max(4vw + 10rem,8rem);
+    font-size: max(4vw + 10rem,2rem + 10vw);
 }
 
 @media screen and (width < 1600px){
@@ -138,7 +139,7 @@ svg{
         margin: 0;
     }
     .banner-content h1{
-        margin-bottom: 50%;
+        margin-bottom: 50vh;
         font-size: 20vw;
     }
 
