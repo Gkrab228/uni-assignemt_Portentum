@@ -6,6 +6,8 @@
 
 }
 
+
+
 h1,h2,h3,h4,p{
     margin: 0;
 }
@@ -55,6 +57,16 @@ nav{
 
 nav h2{
     font-size: 2.5rem;
+    background: linear-gradient(currentColor 0 0) 
+      bottom left/
+      var(--underline-width, 0%) 0.1em
+      no-repeat;
+    text-decoration: none;
+    transition: background-size 0.5s;
+}
+  
+nav h2:hover {
+    --underline-width: 100%;
 }
 
 .burger-menu {
@@ -91,7 +103,7 @@ nav h2{
     nav {
         z-index: 3;
         position: fixed;
-        top: -50%; 
+        top: -100%; 
         width: 100%;
         margin: 0;
         flex-direction: column;

@@ -1,10 +1,12 @@
 
+function detectMob() {
+    return ( ( window.innerWidth <= 800 ) );
+}
 
 const cans = document.querySelectorAll(".parralax");
 
 document.addEventListener("scroll", parralaxEffect); 
 parralaxEffect();
-
 
 function parralaxEffect(){
     for(let can of cans){
@@ -23,20 +25,21 @@ function parralaxEffect(){
 };
 
 interactiveItems(document.querySelector(".presentation-section"), [
-    {item: cans[0], amp: -5, rotate: 2,scale: -0.01},
+    {item: cans[0], amp: -3, rotate: 2,scale: -0.01},
     {item:  document.querySelector(".h-Green"), amp: 10},
 ]);
 
 interactiveItems(document.querySelector(".banner-section"), [
-    {item: cans[1], amp: -5, rotate: 2,scale: -0.01},
+    {item: cans[1], amp: -5, rotate: 3,scale: -0.01},
     {item: document.querySelector(".h-Taste"), amp: 10},
 ]);
+
 
 
 function interactiveItems(parent,items){
     if(!parent||detectMob()) return;
 
-    parent.addEventListener("mousemove",(e)=>{
+    document.addEventListener("mousemove",(e)=>{
         items.forEach(element => {
 
             let coords  = element.item.getBoundingClientRect();
@@ -46,13 +49,13 @@ function interactiveItems(parent,items){
             const valueY = e.pageY/center.y;
  
             let finalValue = `translate(${valueX*element.amp}px,${valueY*element.amp}px)`;
-
+            
             if(element.rotate){
                 const distance = getDistance(e,center);
                 finalValue += `rotate(${distance*element.rotate}deg)`;
             }
             if(element.scale){
-                const mult = getDistance(coords,e,center)*element.scale +  1;
+                const mult = getDistance(e,center)*element.scale +  1;
                 finalValue += `scale(${mult})`;
             }
             element.item.style.transform = finalValue;
@@ -85,7 +88,11 @@ function getCentersOfElement(coords){
 
 const backgroundBin = document.querySelector(".background-bin");
 
-if(backgroundBin)  backgroundGenerate();
+interactiveItems(document.querySelector(".contact-us-section"),
+    [{item: backgroundBin, amp: -5}
+]);
+
+if(backgroundBin)  document.onload = backgroundGenerate();
 
 function backgroundGenerate(){
     const sizeEl = document.createElement("div");
@@ -95,9 +102,10 @@ function backgroundGenerate(){
     const charHeight = parseInt(getComputedStyle(sizeEl).height);
     const charWidth = sizeEl.clientWidth;
     sizeEl.remove();
+    console.log(charHeight,charWidth);
 
     const charVert = backgroundBin.parentNode.clientHeight / charHeight;
-    const charHoriz = backgroundBin.parentNode.clientWidth / charWidth;
+    const charHoriz = backgroundBin.parentNode.clientWidth / 19;
     let resultDivs =  getListDivs(charVert,charHoriz);
 
     backgroundBin.append(...resultDivs)
@@ -127,14 +135,19 @@ function getListDivs(charVert,charHoriz){
         }
         result.push(div);
     }
-    setInterval(()=>{randomSpanInsertion(result)},500);
+    setTimeout(function randInterval(){
+        randomSpanInsertion(result);
+        const randDelay = Math.floor(Math.random()*100);
+        setTimeout(randInterval,randDelay);
+    },500);
     return result;
 }
 
 function randomSpanInsertion(result){
-    const randomDiv = Math.round(result.length*Math.random());
+    const randomDiv = Math.floor(result.length*Math.random());
     const span = document.createElement("span");
-    span.innerHTML = "0"+ Math.round(Math.random());
+    
+    span.innerHTML = Math.round(Math.random());
     result[randomDiv].style.color = "rgb(45, 45, 45)";
     result[randomDiv].prepend(span);
     setTimeout(() => {
@@ -149,8 +162,3 @@ document.querySelector('.burger-menu').addEventListener('click', () => {
     const navMenu = document.querySelector('nav');
     navMenu.classList.toggle('open');
 });
-
-
-function detectMob() {
-    return ( ( window.innerWidth <= 800 ) );
-}
