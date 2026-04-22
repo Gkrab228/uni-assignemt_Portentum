@@ -31,8 +31,10 @@ main{
     align-items: center;
 }
 
-header{
-    z-index: 1;
+@media screen and (width<700px) {
+    main{
+        grid-template-rows: none;
+    }
 }
 
 .contact-us-section{
@@ -47,7 +49,7 @@ form{
     flex-direction: column;
     margin: auto;
     gap: 1.5rem;
-    width: min(70vw, 600px);
+    width: min(70vw, 10vw + 30rem);
     background-color: var(--Primary-Onyx);
     padding: 3rem;
 }
@@ -89,7 +91,6 @@ form{
     color: rgba(255, 255, 255, 0.4);
 }
 
-
 .submit-btn {
     font-size: 2.5rem;
     padding: 1rem 2rem;
@@ -98,4 +99,3 @@ form{
     color: var(--Primary-Onyx);
     cursor: pointer;
 }
-

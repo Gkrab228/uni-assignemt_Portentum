@@ -27,6 +27,7 @@
 }
 
 .h-Green{
+    font-size: var(--h1);
     letter-spacing: min(.7rem,.7vw);
     text-shadow: 0 0 20px rgba(0, 0, 0, 0.365);
 }
@@ -43,6 +44,7 @@
 
 .can{
     width: clamp(350px, 20vw + 25rem, 70vw);
+    filter: drop-shadow(0 0 40px rgba(0, 0, 0, 0.388))
 }
 
 

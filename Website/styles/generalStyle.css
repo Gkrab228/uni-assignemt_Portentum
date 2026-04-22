@@ -26,6 +26,7 @@ header{
     align-items: center;
     justify-content: space-between;
     flex-shrink: 1;
+    z-index: 5;
 }
 
 header img{
@@ -38,7 +39,6 @@ a{
 }
 
 h1{
-    font-size: var(--h1);
     color: white;
     text-align: center;
 }
@@ -52,12 +52,11 @@ nav{
     background-color: var(--Primary-Lime);
     padding: 0rem 2rem;
     margin: 2rem;
-    
 }
 
 nav h2{
     font-size: 2.5rem;
-    background: linear-gradient(currentColor 0 0) 
+    background: linear-gradient(black 0 0) 
       bottom left/
       var(--underline-width, 0%) 0.1em
       no-repeat;

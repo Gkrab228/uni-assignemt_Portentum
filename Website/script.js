@@ -60,9 +60,8 @@ function interactiveItems(parent,items){
             }
             element.item.style.transform = finalValue;
         });
-
-
     })
+
     function getDistance(event,center){
         const vectorX = center.x - event.clientX;
         const vectorY = center.y - event.clientY;
@@ -102,7 +101,6 @@ function backgroundGenerate(){
     const charHeight = parseInt(getComputedStyle(sizeEl).height);
     const charWidth = sizeEl.clientWidth;
     sizeEl.remove();
-    console.log(charHeight,charWidth);
 
     const charVert = backgroundBin.parentNode.clientHeight / charHeight;
     const charHoriz = backgroundBin.parentNode.clientWidth / 19;
