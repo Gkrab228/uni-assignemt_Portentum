@@ -1,6 +1,6 @@
 
 function detectMob() {
-    return ( ( window.innerWidth <= 800 ) );
+    return ( ( window.innerWidth <= 700 ) );
 }
 
 const cans = document.querySelectorAll(".parralax");
@@ -37,9 +37,10 @@ interactiveItems(document.querySelector(".banner-section"), [
 
 
 function interactiveItems(parent,items){
-    if(!parent||detectMob()) return;
+    if(!parent) return;
 
     document.addEventListener("mousemove",(e)=>{
+        if(detectMob()) {items.forEach(element=>element.item.style="none");return;}
         items.forEach(element => {
 
             let coords  = element.item.getBoundingClientRect();

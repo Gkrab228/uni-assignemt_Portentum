@@ -2,7 +2,7 @@
     --Primary-Onyx: #090B09;
     --Secondary-Purple: #B884F3;
     --Primary-Lime: #C0FF01;
-    --h1: max(10vw + 10rem, 10rem);
+    --h1: clamp(4rem, 2.8rem + 19.2vw, 22rem)
 
 }
 
@@ -29,8 +29,9 @@ header{
     z-index: 5;
 }
 
-header img{
-    margin: 2rem;
+header > img{
+    object-fit: fill;
+    margin: 1rem 2rem;
 }
 
 a{
@@ -50,14 +51,15 @@ nav{
     gap: 0.5rem;
     margin-left: auto;
     background-color: var(--Primary-Lime);
-    padding: 0rem 2rem;
+    padding: .5rem 2rem;
     margin: 2rem;
 }
 
 nav h2{
-    font-size: 2.5rem;
+    font-size: 2rem;
+    font-weight: 100;
     background: linear-gradient(black 0 0) 
-      bottom left/
+      bottom center/
       var(--underline-width, 0%) 0.1em
       no-repeat;
     text-decoration: none;
@@ -81,26 +83,27 @@ nav h2:hover {
 @media screen and (max-width: 700px) {
     .burger-menu {
         display: block;
+        position: relative;
+        z-index: 5;
     }
-
+    header > img{
+        height: 4rem;
+    }
     header {
         z-index: 4;
         position: fixed;
         top: 0;
         left: 0;
-        width: 100%;
+        right: 0;
         box-sizing: border-box;
         background-color: var(--Primary-Onyx);
     }
-
-    header > img, 
-    .burger-menu {
-        position: relative;
-        z-index: 5;
+    main{
+        padding-block-start: 20%;
     }
 
     nav {
-        z-index: 3;
+        z-index: 1;
         position: fixed;
         top: -100%; 
         width: 100%;
@@ -108,14 +111,17 @@ nav h2:hover {
         flex-direction: column;
         background-color: var(--Primary-Onyx);
         color: white;
-        padding: 120px 2rem 2rem 2rem; 
+        padding: 2rem 0; 
         box-sizing: border-box;
     }
+    nav img{
+        display: none;
+    }
     nav.open {
-        top: 10%;
+        top: 15%;
     }
     h1{
-        font-size: calc(5em + 10vw);
+        font-size: clamp(8rem, 6rem + 16vw, 16rem);
     }
 }
 
@@ -137,14 +143,20 @@ button:not(.burger-menu):hover {
 footer{
     background-color: var(--Primary-Onyx);
     height: 10rem;
+    width: auto;
     position: relative;
+    padding: 1rem;
+    box-sizing: border-box;
+    color: rgb(77, 77, 77);
+    font-size: 1.5rem;
 }
 
 footer::after{
     content: "";
     position: absolute;
     bottom: 0;
-    height: 1rem;
-    width: 100%;
-    background-color: var(--Secondary-Purple);
+    left: 0;
+    right: 0;
+    height: 3rem;
+    background: linear-gradient(180deg, var(--Primary-Onyx) 0%, rgba(30, 20, 42, 1) 61%, rgba(52, 24, 82, 1) 100%);
 }

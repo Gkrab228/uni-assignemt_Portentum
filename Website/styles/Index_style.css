@@ -43,7 +43,7 @@
 }
 
 .can{
-    width: clamp(350px, 20vw + 25rem, 70vw);
+    width: clamp(16rem, 11.6rem + 35.2vw, 60rem);
     filter: drop-shadow(0 0 40px rgba(0, 0, 0, 0.388))
 }
 
@@ -53,18 +53,8 @@
         top: 40%;
     }
     .h-Green{
-        margin: 20% 0 120% 0;
+        margin-bottom: 50vh;
         line-height: 100%;
-    }
-
-    .h-Taste{
-        
-        margin: 10% 0 60% 0 !important;
-        line-height: 100%;
-    }
-
-    .presentation-section{
-        padding: 12rem 0 12rem 0 !important;
     }
     .buy-now{
         margin: 100% 0 0 0;
